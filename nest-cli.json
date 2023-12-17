@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/zzstudio-server/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/zzstudio-server/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/zzstudio-server",
+  "projects": {
+    "zzstudio-server": {
+      "type": "application",
+      "root": "apps/zzstudio-server",
+      "entryFile": "main",
+      "sourceRoot": "apps/zzstudio-server/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/zzstudio-server/tsconfig.app.json"
+      }
+    },
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    }
+  }
+}
